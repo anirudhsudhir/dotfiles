@@ -16,3 +16,4 @@ source ~/.config/zsh/.zsh-aliases
 
 eval "$(starship init zsh)"
 
+set -o vi
