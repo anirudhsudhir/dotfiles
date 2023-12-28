@@ -6,6 +6,8 @@ ENABLE_CORRECTION="true"
 
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
+# ZSH_THEME="powerlevel10k/powerlevel10k"
+
 source $ZSH/oh-my-zsh.sh
 
 export NVM_DIR="$HOME/.nvm"
