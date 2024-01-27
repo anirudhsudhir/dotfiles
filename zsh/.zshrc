@@ -1,21 +1,36 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-# Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time oh-my-zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+ZSH_THEME="robbyrussell"
 
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
-
-# ZSH_THEME="powerlevel10k/powerlevel10k"
+# Which plugins would you like to load?
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(
+    git
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+    )
 
 source $ZSH/oh-my-zsh.sh
 
+source ~/.config/zsh/aliases.sh
+
+set -o vi
+
+export PATH="$PATH:$HOME/.rvm/bin"
+export PATH="/opt/homebrew/bin:$PATH"
+export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/2.6.3p62/bin:$PATH"
+_
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-source ~/.config/zsh/.zsh-aliases
-
-eval "$(starship init zsh)"
-
-set -o vi
+source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
+source /opt/homebrew/opt/chruby/share/chruby/auto.sh
+chruby ruby-3.1.3
