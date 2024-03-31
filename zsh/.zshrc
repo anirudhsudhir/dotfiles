@@ -24,6 +24,7 @@ export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/2.6.3p62/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
+export PATH=$PATH:~/go/bin
 
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
