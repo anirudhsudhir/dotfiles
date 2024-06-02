@@ -16,10 +16,6 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-source ~/.config/zsh/aliases.sh
-
-set -o vi
-
 export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/2.6.3p62/bin:$PATH"
@@ -33,3 +29,7 @@ source /opt/homebrew/opt/chruby/share/chruby/auto.sh
 chruby ruby-3.1.3
 
 eval "$(starship init zsh)"
+
+source ~/.config/zsh/aliases.sh
+
+set -o vi

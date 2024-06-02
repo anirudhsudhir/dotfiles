@@ -1,5 +1,6 @@
+defaults write -g NSWindowShouldDragOnGesture -bool true
+
 alias v='nvim'
-alias l='ls -a'
 alias gs='git status'
 alias gl='git log'
 alias gr='git reset'
